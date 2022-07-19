@@ -1,0 +1,53 @@
+/* ------------------------- Fixed Nav -------------------------------------------------- */
+
+.fixed-nav {
+  margin-top: 1em;
+  background: var(--color-dark);
+}
+
+.fixed-nav-inner {
+  display: flex;
+  flex-direction: column;
+  padding-left: 7.5vw;
+}
+
+.fixed-nav .nav-row ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: calc(var(--gap-padding) / -2);
+}
+
+.fixed-nav .nav-row .btn-link .btn-click {
+  height: auto;
+}
+
+.fixed-nav .nav-row .btn-text-inner {
+  font-size: 3.5em;
+  line-height: 1.4;
+  font-size: calc(clamp(3.25em, 5vw, 4em) * 0.875);
+}
+
+.fixed-nav .nav-row .btn-link .btn-click::after {
+  background: var(--color-white);
+  left: calc(var(--gap-padding) / -4);
+  top: 50%;
+  bottom: auto;
+  width: calc(clamp(16px, 1.2vw, 19px) / 1.65);
+  height: calc(clamp(16px, 1.2vw, 19px) / 1.65);
+}
+
+.fixed-nav .social-row {
+  margin-left: calc(var(--gap-padding) / -4);
+}
+
+.fixed-nav .social-row .socials ul {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1em;
+}
+
+.fixed-nav .nav-row ul .btn {
+  transition: all 0.8s cubic-bezier(0.7, 0, 0.2, 1);
+  will-change: transform;
+}
