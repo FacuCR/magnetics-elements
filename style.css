@@ -59,7 +59,6 @@ body {
 
 html,
 body {
-  width: 100%;
   -webkit-font-smoothing: antialiased;
   position: relative;
   background-color: var(--color-light);
