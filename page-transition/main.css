@@ -21,6 +21,7 @@
 }
 
 .loading-screen__title {
+  opacity: 0;
   color: var(--color-white);
   font-weight: 450;
   font-style: normal;

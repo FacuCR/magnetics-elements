@@ -9,12 +9,21 @@ function delay(n) {
 
 function pageTransition() {
   var tl = gsap.timeline();
+
   tl.set(".loading-screen", { bottom: "-100%" });
+
   tl.to(".loading-screen", {
     duration: 1,
     height: "100%",
     bottom: "0%",
     ease: "Power4.easeIn",
+  });
+
+  tl.to(".loading-screen__title", {
+    duration: 0.5,
+    opacity: 1,
+    ease: "Power4.easeOut",
+    delay: 0.3,
   });
 
   tl.to(".loading-screen", {
@@ -24,6 +33,9 @@ function pageTransition() {
     ease: "Power4.easeOut",
     delay: 0.3,
   });
+
+  tl.set(".loading-screen__title", { opacity: "0" });
+
   tl.set(".loading-screen", { bottom: "-100%" });
 }
 
