@@ -50,6 +50,39 @@ function contentAnimation() {
   });
 }
 
+// Animation - First Page Load
+function initLoader() {
+  var tl = gsap.timeline();
+
+  tl.set(".loading-screen", { height: "100%", bottom: "0" });
+
+  tl.to(".loading-screen", {
+    duration: 1,
+    height: "100%",
+    bottom: "0%",
+    ease: "Power4.easeIn",
+  });
+
+  tl.to(".loading-screen__title", {
+    duration: 0.5,
+    opacity: 1,
+    ease: "Power4.easeOut",
+    delay: 0.3,
+  });
+
+  tl.to(".loading-screen", {
+    duration: 1,
+    height: "100%",
+    bottom: "100%",
+    ease: "Power4.easeOut",
+    delay: 0.3,
+  });
+
+  tl.set(".loading-screen__title", { opacity: "0" });
+
+  tl.set(".loading-screen", { bottom: "-100%" });
+}
+
 function initTransition() {
   barba.init({
     sync: true,
@@ -71,6 +104,8 @@ function initTransition() {
         },
 
         async once(data) {
+          initLoader();
+          await delay();
           contentAnimation();
         },
       },
