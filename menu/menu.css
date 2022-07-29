@@ -124,3 +124,14 @@ main .btn-hamburger.active {
 .theme-dark .btn-menu .btn-click:hover::after {
     background: var(--color-white);
 }
+
+/* --- Socials Links ---*/
+.social-row__list {
+    display: flex;
+    justify-content: end;
+    padding-bottom: 10rem;
+}
+
+.nav-title {
+    color: var(--color-gray);
+}
